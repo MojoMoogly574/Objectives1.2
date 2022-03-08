@@ -148,8 +148,16 @@
 		093C092E27D700F0006458D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				093C090627D700B2006458D4 /* ContentView.swift */,
+				093C094127D7366E006458D4 /* SideMenuDrawer */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		093C094127D7366E006458D4 /* SideMenuDrawer */ = {
+			isa = PBXGroup;
+			children = (
 				093C092F27D70155006458D4 /* MainView.swift */,
+				093C090627D700B2006458D4 /* ContentView.swift */,
 				093C093127D703D4006458D4 /* SideMenuView.swift */,
 				093C093327D7068D006458D4 /* HomeView.swift */,
 				093C093527D70E8B006458D4 /* TabButtonView.swift */,
@@ -159,7 +167,7 @@
 				093C093D27D73266006458D4 /* SettingsView.swift */,
 				093C093F27D732D8006458D4 /* HelpView.swift */,
 			);
-			path = Views;
+			path = SideMenuDrawer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -21,9 +21,12 @@ struct SideMenuView: View {
             // Profile Pic...
             Image("profile")
                 .resizable()
+                .clipShape(Rectangle())
+                .overlay(Rectangle().stroke(.white, lineWidth: 5))
                 .aspectRatio(contentMode: .fill)
-                .frame(width: 70, height: 70)
-                .cornerRadius(10)
+                .frame(width: 100, height: 100)
+                .shadow(color: .black, radius: 7)
+        
             // Padding top for Top Close Button...
                 .padding(.top,50)
             
