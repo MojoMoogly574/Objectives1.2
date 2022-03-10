@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES" codeGenerationType="class">
+        <attribute name="exerciseName" attributeType="String"/>
+        <attribute name="reps" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sets" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="workouts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exercises" inverseEntity="Workout"/>
+    </entity>
+    <entity name="Journal" representedClassName="Journal" syncable="YES" codeGenerationType="class">
+        <attribute name="entryTitle" optional="YES" attributeType="String"/>
+        <attribute name="journalEntry" attributeType="String"/>
+        <attribute name="publishedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="journalEntries" inverseEntity="Workout"/>
+    </entity>
+    <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="class">
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="priority" optional="YES" attributeType="String"/>
+        <attribute name="workoutDescrip" attributeType="String"/>
+        <attribute name="workoutName" attributeType="String"/>
+        <relationship name="exercises" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workouts" inverseEntity="Exercise"/>
+        <relationship name="journalEntries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Journal" inverseName="workout" inverseEntity="Journal"/>
+    </entity>
+    <elements>
+        <element name="Workout" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Journal" positionX="-54" positionY="36" width="128" height="89"/>
+        <element name="Exercise" positionX="-45" positionY="63" width="128" height="89"/>
+    </elements>
+</model>

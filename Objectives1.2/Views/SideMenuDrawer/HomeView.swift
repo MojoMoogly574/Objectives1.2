@@ -21,7 +21,7 @@ struct HomeView: View {
         TabView(selection: $selectedTab){
             
             // Views...
-            WorkoutList()
+            WorkoutListView()
                 .tag("Workouts")
             
             HistoryView()
@@ -39,45 +39,12 @@ struct HomeView: View {
     }
 }
 
-struct Home_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
-// All Sub Views....
-
-struct WorkoutList: View {
-    
-    var body: some View{
-        
-        NavigationView{
-            
-            VStack(alignment: .leading,spacing: 20){
-            
-                Image("pic")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: getRect().width - 50, height: 400)
-                    .cornerRadius(20)
-                
-                VStack(alignment: .leading, spacing: 5, content: {
-                    
-                    Text("Emily")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.primary)
-                    
-                    Text("Money Woman, Social Philanthropist, Glamour Magazine top 10 Beautiful Woman of All Time, Intellectual.")
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.gray)
-                })
-            }
-            .navigationTitle("Workout List")
-        }
-    }
-}
 
 
 

@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct Objectives1_2App: App {
+    
+    init() {
+    UITableView.appearance().separatorStyle = .none
+}
+
     var body: some Scene {
         WindowGroup {
             ContentView()
